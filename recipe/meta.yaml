@@ -1,5 +1,5 @@
 {% set name = "soxspipe" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4c8352663f12b1848462746916372c0bc0fcfc0412ffc818bc455d4c64c5c6ce
+  sha256: c0e2855c1f82e995e1205d51553508b48993e44b7152586427f998f3b43e872c
 
 build:
   number: 0
