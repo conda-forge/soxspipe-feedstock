@@ -35,6 +35,7 @@ requirements:
     - pyyaml
     - tabulate
     - unicodecsv
+    - multiprocess
 
 test:
   imports:
