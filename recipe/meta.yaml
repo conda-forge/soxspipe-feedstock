@@ -37,13 +37,6 @@ requirements:
     - unicodecsv
     - multiprocess
 
-test:
-  imports:
-    - soxspipe
-    - soxspipe.commonutils
-    - soxspipe.recipes
-  commands:
-    - soxspipe --help
 
 about:
   home: https://github.com/thespacedoctor/soxspipe
