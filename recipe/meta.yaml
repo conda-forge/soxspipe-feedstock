@@ -10,7 +10,7 @@ source:
   sha256: c451897eda275c143d57c015826360c6bdae0aab293717ff21150ff89cce51f9
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - soxspipe=soxspipe.cl_utils:main
   script: {{ PYTHON }} -m pip install . -vv
