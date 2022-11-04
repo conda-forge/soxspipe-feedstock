@@ -36,7 +36,6 @@ requirements:
     - tabulate
     - unicodecsv
     - multiprocess
-    - csaps
 
 test:
   imports:
