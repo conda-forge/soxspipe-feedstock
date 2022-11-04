@@ -38,9 +38,6 @@ requirements:
     - multiprocess
 
 test:
-   imports:
-     - soxspipe.commonutils
-     - soxspipe.recipes
    commands:
      - soxspipe --help
      
