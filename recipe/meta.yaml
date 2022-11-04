@@ -37,7 +37,13 @@ requirements:
     - unicodecsv
     - multiprocess
 
-
+test:
+   imports:
+     - soxspipe.commonutils
+     - soxspipe.recipes
+   commands:
+     - soxspipe --help
+     
 about:
   home: https://github.com/thespacedoctor/soxspipe
   license: GPL3
