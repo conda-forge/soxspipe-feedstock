@@ -1,5 +1,5 @@
 {% set name = "soxspipe" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: c451897eda275c143d57c015826360c6bdae0aab293717ff21150ff89cce51f9
+  sha256: d969ec4380a8d1b075c314f49db0b79e2854fa600ada751669b6678f21b12262
 
 build:
   number: 1
@@ -38,6 +38,10 @@ requirements:
     - multiprocess
 
 test:
+   imports:
+     - soxspipe
+     - soxspipe.commonutils
+     - soxspipe.recipes
    commands:
      - soxspipe --help
      
