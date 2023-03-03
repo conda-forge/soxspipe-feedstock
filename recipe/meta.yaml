@@ -1,16 +1,16 @@
 {% set name = "soxspipe" %}
-{% set version = "0.7.1" %}
+{% set version = "0.7.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: d969ec4380a8d1b075c314f49db0b79e2854fa600ada751669b6678f21b12262
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: ad48aef026488975f93709dbea8ee6870a89b5a47999bb3cec9f92f67e9357c9
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - soxspipe=soxspipe.cl_utils:main
   script: {{ PYTHON }} -m pip install . -vv
@@ -38,13 +38,13 @@ requirements:
     - multiprocess
 
 test:
-   imports:
-     - soxspipe
-     - soxspipe.commonutils
-     - soxspipe.recipes
-   commands:
-     - soxspipe --help
-     
+  imports:
+    - soxspipe
+    - soxspipe.commonutils
+    - soxspipe.recipes
+  commands:
+    - soxspipe --help
+
 about:
   home: https://github.com/thespacedoctor/soxspipe
   license: GPL3
