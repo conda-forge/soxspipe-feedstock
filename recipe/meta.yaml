@@ -1,13 +1,14 @@
 {% set name = "soxspipe" %}
-{% set version = "0.7.2" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ad48aef026488975f93709dbea8ee6870a89b5a47999bb3cec9f92f67e9357c9
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: 85a230add71a063aadffe8c716c4c2f7d4239fb25d5a896de9392ecaff5e11d5
+
 
 build:
   number: 0
@@ -19,7 +20,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.9
   run:
     - astropy
     - bottleneck
@@ -31,12 +32,13 @@ requirements:
     - pandas
     - pathlib
     - photutils
-    - python >=3.6
-    - pyyaml
+    - python >=3.9
+    - pyyaml ==5.4.1
     - tabulate
     - unicodecsv
     - multiprocess
-
+    - jinja2
+    
 test:
   imports:
     - soxspipe
@@ -47,7 +49,7 @@ test:
 
 about:
   home: https://github.com/thespacedoctor/soxspipe
-  license: GPL3
+  license: GPL-3.0-only
   license_family: GPL3
   license_file: LICENSE
   summary: A python package and command-line tools to The data-reduction pipeline for the SOXS instrument
