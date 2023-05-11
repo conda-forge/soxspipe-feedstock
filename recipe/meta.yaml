@@ -1,5 +1,5 @@
 {% set name = "soxspipe" %}
-{% set version = "0.7.1" %}
+{% set version = "0.8.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: d969ec4380a8d1b075c314f49db0b79e2854fa600ada751669b6678f21b12262
+  sha256: 85a230add71a063aadffe8c716c4c2f7d4239fb25d5a896de9392ecaff5e11d5
 
 build:
   number: 1
@@ -19,7 +19,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.9
   run:
     - astropy
     - bottleneck
@@ -31,12 +31,13 @@ requirements:
     - pandas
     - pathlib
     - photutils
-    - python >=3.6
-    - pyyaml
+    - python >=3.9
+    - pyyaml==5.4.1
     - tabulate
     - unicodecsv
     - multiprocess
-
+    - jinja2
+    
 test:
    imports:
      - soxspipe
