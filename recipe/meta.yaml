@@ -50,8 +50,8 @@ test:
 about:
   home: https://github.com/thespacedoctor/soxspipe
   license: GPL-3.0-only
-	license_family: GPL3
-	license_file: LICENSE
+  license_family: GPL3
+  license_file: LICENSE
   summary: A python package and command-line tools to The data-reduction pipeline for the SOXS instrument
   doc_url: https://soxspipe.readthedocs.io
   dev_url: https://github.com/thespacedoctor/soxspipe
