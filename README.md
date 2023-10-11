@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/soxspipe-feedst
 
 Home: https://github.com/thespacedoctor/soxspipe
 
-Package license: GPL3
+Package license: GPL-3.0-only
 
 Summary: A python package and command-line tools to The data-reduction pipeline for the SOXS instrument
 
