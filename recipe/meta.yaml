@@ -1,5 +1,5 @@
 {% set name = "soxspipe" %}
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 85a230add71a063aadffe8c716c4c2f7d4239fb25d5a896de9392ecaff5e11d5
+  sha256: cfa2146a741bd6f56ec3d3002f38d4b6a369b2d32ea40c7ad09133cf0ebc7b89
 
 
 build:
@@ -38,7 +38,7 @@ requirements:
     - unicodecsv
     - multiprocess
     - jinja2
-    
+
 test:
   imports:
     - soxspipe
