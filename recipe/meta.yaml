@@ -37,6 +37,7 @@ requirements:
     - unicodecsv
     - multiprocess
     - jinja2
+    - specutils
 
 test:
   imports:
