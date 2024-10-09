@@ -10,30 +10,31 @@ source:
   sha256: 342747d43aacab9354ef1314768aa3dd4ff729e2b27b4cf38a6f6fe0ea7579dc
 
 build:
+  number: 0
   entry_points:
     - soxspipe=soxspipe.cl_utils:main
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
 
 requirements:
   host:
-    - python >=3.7
     - pip
+    - python >=3.9
   run:
-    - python >=3.7
-    - pyyaml ==5.3.1
-    - fundamentals
     - astropy
+    - bottleneck
     - ccdproc
     - docopt
-    - photutils
+    - fundamentals
     - matplotlib-base
     - numpy
-    - unicodecsv
     - pandas
+    - pathlib
+    - photutils
+    - python >=3.9
+    - pyyaml ==5.3.1
     - tabulate
-    - bottleneck
+    - unicodecsv
     - multiprocess
     - jinja2
     - specutils
@@ -41,17 +42,19 @@ requirements:
 test:
   imports:
     - soxspipe
+    - soxspipe.commonutils
+    - soxspipe.recipes
   commands:
-    - pip check
     - soxspipe --help
-  requires:
-    - pip
 
 about:
   home: https://github.com/thespacedoctor/soxspipe
-  summary: A python package and command-line tools to The data-reduction pipeline for the SOXS instrument
-  license: GPL-3.0
+  license: GPL-3.0-only
+  license_family: GPL3
   license_file: LICENSE
+  summary: A python package and command-line tools to The data-reduction pipeline for the SOXS instrument
+  doc_url: https://soxspipe.readthedocs.io
+  dev_url: https://github.com/thespacedoctor/soxspipe
 
 extra:
   recipe-maintainers:
