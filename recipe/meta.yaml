@@ -1,5 +1,5 @@
 {% set name = "soxspipe" %}
-{% set version = "0.11.2" %}
+{% set version = "0.11.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/soxspipe-{{ version }}.tar.gz
-  sha256: f600a1cc20d6f51b485158fb65a85ba0166bf5d0ddbfde6629e418f103b85b52
+  sha256: 2bb2fd4d7358fa2e740b40c78c4d2495e0b949d84cf303a26a48492891264111
 
 build:
-  number: 0
   entry_points:
     - soxspipe=soxspipe.cl_utils:main
-  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
