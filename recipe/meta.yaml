@@ -38,6 +38,7 @@ requirements:
     - multiprocess
     - jinja2
     - specutils
+    - setuptools
 
 test:
   imports:
