@@ -23,22 +23,22 @@ requirements:
     - setuptools
     - wheel
   run:
-    - astropy ==6.1.2
-    - bottleneck ==1.4.0
-    - ccdproc ==2.4.2
-    - docopt ==0.6.2
-    - fundamentals ==2.7.2
-    - matplotlib-base ==3.9.2
-    - numpy ==2.1.0
-    - pandas ==2.2.2
-    - pathlib ==1.0.1
-    - photutils ==1.13.0
+    - astropy 6.1.*
+    - bottleneck 1.4.*
+    - ccdproc 2.4.*
+    - docopt 0.6.*
+    - fundamentals 2.7.*
+    - matplotlib-base 3.9.*
+    - numpy 2.1.*
+    - pandas 2.2.*
+    - pathlib 1.0.*
+    - photutils 1.13.*
     - python >=3.11
-    - pyyaml ==6.0.2
-    - tabulate ==0.9.0
-    - unicodecsv ==0.14.1
-    - multiprocess ==0.70.16
-    - specutils ==1.16.0
+    - pyyaml 6.0.*
+    - tabulate 0.9.*
+    - unicodecsv 0.14.*
+    - multiprocess 0.70.*
+    - specutils 1.16.*
 ]
 
 
