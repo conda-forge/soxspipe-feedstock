@@ -47,6 +47,8 @@ test:
     - soxspipe.recipes
   commands:
     - soxspipe --help
+  requires:
+    - python {{ python_min }}
 
 about:
   home: https://github.com/thespacedoctor/soxspipe
@@ -60,9 +62,3 @@ about:
 extra:
   recipe-maintainers:
     - thespacedoctor
-
-{% set name = "soxspipe" %}
-{% set version = "0.11.7" %}
-
-
-
