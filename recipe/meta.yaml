@@ -31,7 +31,6 @@ requirements:
     - matplotlib-base 3.9.*
     - numpy 2.1.*
     - pandas 2.2.*
-    - pathlib 1.0.*
     - photutils 1.13.*
     - python >=3.11
     - pyyaml 6.0.*
