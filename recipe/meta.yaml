@@ -1,6 +1,6 @@
 {% set name = "soxspipe" %}
 {% set version = "0.11.7" %}
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
