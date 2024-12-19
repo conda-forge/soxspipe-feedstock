@@ -1,5 +1,5 @@
 {% set name = "soxspipe" %}
-{% set version = "0.11.9" %}
+{% set version = "0.11.10" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/soxspipe-{{ version }}.tar.gz
-  sha256: 1f10460c66b44d8915bc9a2ab5d45c4d0108a422c2f7e3360ec8bc78a2880f81
+  sha256: 457dcd7b20f0a7559452273a57a1ceea9bc19e10b1d31b8a59c546a8c4689952
 
 build:
   entry_points:
@@ -39,6 +39,7 @@ requirements:
     - bottleneck ==1.4.0
     - multiprocess ==0.70.16
     - specutils ==1.16.0
+    - humanize ==4.11.0
 
 test:
   imports:
