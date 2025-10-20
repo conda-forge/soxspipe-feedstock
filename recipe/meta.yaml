@@ -1,5 +1,5 @@
 {% set name = "soxspipe" %}
-{% set version = "0.13.6" %}
+{% set version = "0.14.1" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/soxspipe-{{ version }}.tar.gz
-  sha256: 21ea31e5eeedb6def1e5e2efc71b593df37bbd8fd2915c629b6b3f834e0dfe45
+  sha256: 595e78d9ffc4e92cf75ae659f29f9c66e1cb11dc7535f8a85f64757f03de0e77
 
 build:
   entry_points:
@@ -26,7 +26,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - pyyaml ==6.0.2
-    - fundamentals ==2.7.2
+    - fundamentals ==2.7.6
     - astropy ==6.1.2
     - ccdproc ==2.4.2
     - docopt ==0.6.2
@@ -40,6 +40,9 @@ requirements:
     - multiprocess ==0.70.16
     - specutils ==1.16.0
     - humanize ==4.11.0
+    - line_profiler
+    - memory_profiler
+    - scikit-learn
 
 test:
   imports:
