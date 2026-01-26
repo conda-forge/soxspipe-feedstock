@@ -44,15 +44,15 @@ requirements:
     - memory_profiler
     - scikit-learn
 
-# test:
-#   imports:
-#     - soxspipe
-#     - soxspipe.commonutils
-#     - soxspipe.recipes
-#   commands:
-#     - soxspipe --help
-#   requires:
-#     - python {{ python_min }}
+test:
+  imports:
+    - soxspipe
+    - soxspipe.commonutils
+    - soxspipe.recipes
+  commands:
+    - soxspipe --help
+  requires:
+    - python {{ python_min }}
 
 about:
   home: https://github.com/thespacedoctor/soxspipe
