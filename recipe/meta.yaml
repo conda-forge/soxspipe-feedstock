@@ -43,6 +43,7 @@ requirements:
     - line_profiler
     - memory_profiler
     - scikit-learn
+    - numba >=0.61
 
 test:
   imports:
