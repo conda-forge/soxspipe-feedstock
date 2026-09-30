@@ -1,5 +1,5 @@
 {% set name = "soxspipe" %}
-{% set version = "0.17.4" %}
+{% set version = "0.18.0" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/soxspipe-{{ version }}.tar.gz
-  sha256: 4aeba8ad7a5b90b2acaa53e634b57bc729ad9318a8d0fccbda9dee37729ceeba
+  sha256: ca68c9f714d02a6533d0744dca135aab0c266413398a45b3de4e311ba44d75da
 
 build:
   entry_points:
@@ -43,6 +43,7 @@ requirements:
     - line_profiler
     - memory_profiler
     - scikit-learn
+    - numba >=0.61
 
 test:
   imports:
