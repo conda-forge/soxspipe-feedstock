@@ -1,5 +1,5 @@
 {% set name = "soxspipe" %}
-{% set version = "0.18.0" %}
+{% set version = "0.19.0" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,34 +8,35 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/soxspipe-{{ version }}.tar.gz
-  sha256: ca68c9f714d02a6533d0744dca135aab0c266413398a45b3de4e311ba44d75da
+  sha256: 5ad7c6a251935dd42f666b1ece8a23bdaebea13b137fb076e6df4e35357725b4
 
 build:
   entry_points:
     - soxspipe=soxspipe.cl_utils:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
+    - setuptools >=70
     - setuptools-scm
     - wheel
   run:
     - python >={{ python_min }}
     - pyyaml ==6.0.2
     - fundamentals ==2.7.6
-    - astropy-base ==6.1.2
+    - astropy-base ==7.2.0
+    - uncompresspy ==0.4.1
     - ccdproc ==2.4.2
     - docopt ==0.6.2
     - photutils ==1.13.0
-    - matplotlib-base ==3.9.2
+    - matplotlib-base
     - numpy ==2.1.0
     - unicodecsv ==0.14.1
-    - pandas ==2.2.2
+    - pandas >=2.2.3,<3
     - tabulate ==0.9.0
     - bottleneck ==1.4.0
     - multiprocess ==0.70.16
@@ -44,6 +45,7 @@ requirements:
     - line_profiler
     - memory_profiler
     - scikit-learn
+    - jinja2
     - numba >=0.61
 
 test:
